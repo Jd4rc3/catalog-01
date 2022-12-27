@@ -5,13 +5,7 @@ using Catalog.Entities;
 
 namespace Catalog.Repositories
 {
-    public interface IInMemItemsRepository
-    {
-        Item GetItem(Guid id);
-        IEnumerable<Item> GetItems();
-    }
-
-    public class InMemItemsRepository : IInMemItemsRepository
+    public class InMemItemsRepository : IItemsRepository
     {
         private readonly List<Item> items = new()
         {
